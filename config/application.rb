@@ -17,7 +17,7 @@ module WeatherappCollab
     config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    config.cache_store = :redis_store, 'redis-19007.c10.us-east-1-4.ec2.redns.redis-cloud.com:19007', { expires_in: 30.minutes }
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #

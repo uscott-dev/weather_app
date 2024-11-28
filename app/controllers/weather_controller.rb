@@ -10,8 +10,17 @@ class WeatherController < ApplicationController
       api = WeatherApi.new(api_key)
       @address = weather_params
       @zipcode = WeatherHelper.get_postal_code(weather_params).to_s.strip
-      @weather = api.weather_by_zipcode(@zipcode)
-      puts weather_params 
+      value = Rails.cache.read(@zipcode)
+      @weather
+      @cached_value
+      if !value
+        @weather = api.weather_by_zipcode(@zipcode)
+        Rails.cache.write(@zipcode, @weather)
+        @cached_value = false
+      else
+        @cached_value = true
+        @weather = JSON.parse(value.body)
+      end
       render "show"
     end
 
