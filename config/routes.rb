@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "weather#index"
+  # Show view for user after address is submitted
+  get 'weather', to: 'weather#search'
 end

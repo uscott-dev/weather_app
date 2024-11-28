@@ -1,8 +1,8 @@
-<% if @weather['main'] %>
- <p>Current Weather in Atlanta </p>
- <p>Temperature: <%= @weather['main']['temp'] - 273.15 %>°C</p>
- <p>Humidity: <%= @weather['main']['humidity'] %> </p>
- <p>Wind Speed: <%= @weather['wind']['speed'] * 3.6 %> km/h </p>
-<% else %>
- <code> Please make sure you've updated your "api-key" in controllers/weatherController.rb </code>
+<%= form_tag '/weather', :method => "get" do |form| %>
+  Weather App
+  </br>
+  <%= label_tag(:address, "Address:") %>
+  <%= text_field_tag(:address) %>
+  </br>
+  <%= submit_tag("Submit") %>
 <% end %>
