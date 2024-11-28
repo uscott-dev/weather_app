@@ -19,7 +19,7 @@ gem "jbuilder"
 # Make HTTP requests to the OpenWeatherMap API
 gem 'httparty', '~> 0.21.0'
 # Allow for Caching within Rails Application
-gem 'redis', '~> 4.2'
+gem 'redis', '~> 5.3'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
