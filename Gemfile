@@ -17,7 +17,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 # Make HTTP requests to the OpenWeatherMap API
-gem 'httparty', '~> 0.21.0'
+gem 'httparty', '~> 0.22.0'
 # Allow for Caching within Rails Application
 gem 'redis', '~> 4.2'
 
